@@ -3,8 +3,8 @@
   <dt>Street Address</dt>
     <dd><%=@address%></dd>
   <dt>Latitude</dt>
-    <dd><%=@lat%></dd>
+    <dd><%=@lat.to_f.round(2)%></dd>
   <dt>Longitude</dt>
-    <dd><%=@long%></dd>
+    <dd><%=@long.to_f.round(2)%></dd>
 </dl>
 
