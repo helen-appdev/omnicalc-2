@@ -5,7 +5,7 @@ class UmbrellaController < ApplicationController
   end 
   
   def geocode_results
-        @address = params.fetch("user_input")
+        @address = params.fetch("user_street_address")
         gmaps_url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + @address + "&key=AIzaSyD8RrOFB0dPsF-leqeFJdmX3yOvcQbfNyY"
 
         @raw_data = open(gmaps_url).read
