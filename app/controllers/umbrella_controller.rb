@@ -13,7 +13,10 @@ class UmbrellaController < ApplicationController
         @parsed_data = JSON.parse(@raw_data)
         
         @results = @parsed_data.fetch("results")
-        @first_result = @results["results"]["location"]
+        @results2 = @results.at(0)
+        @results3 = @results2["geometry"]["location"]
+        @lat = @results3["lat"]
+        @long = @results3["lng"]
         
         render({ :template => "umbrella_templates/geocode_results.html.erb"})
     end
